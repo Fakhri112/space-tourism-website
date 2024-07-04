@@ -26,29 +26,43 @@ defineEmits(["toggleNav"]);
 				<hr class="border-slate-700 w-[68%] absolute left-[-65%]" />
 			</li>
 			<li
-				:class="[path == '/' ? 'border border-0 border-b-2' : '']"
+				:class="[
+					path == '/space-tourism-website' ? 'border border-0 border-b-2' : '',
+				]"
 				class="py-5">
-				<RouterLink to="/">
+				<RouterLink to="/space-tourism-website">
 					<b class="text-white font-bold me-1">00</b> HOME
 				</RouterLink>
 			</li>
 			<li
-				:class="[path == '/destination' ? 'border border-0 border-b-2' : '']"
+				:class="[
+					path == '/space-tourism-website/destination'
+						? 'border border-0 border-b-2'
+						: '',
+				]"
 				class="py-5">
-				<RouterLink to="/destination">
+				<RouterLink to="/space-tourism-website/destination">
 					<b class="text-white font-bold me-1">01</b> DESTINATION
 				</RouterLink>
 			</li>
-			<RouterLink to="/crew">
+			<RouterLink to="/space-tourism-website/crew">
 				<li
-					:class="[path == '/crew' ? 'border border-0 border-b-2' : '']"
+					:class="[
+						path == '/space-tourism-website/crew'
+							? 'border border-0 border-b-2'
+							: '',
+					]"
 					class="py-5">
 					<b class="text-white font-bold me-1">02</b> CREW
 				</li>
 			</RouterLink>
-			<RouterLink to="/technology">
+			<RouterLink to="/space-tourism-website/technology">
 				<li
-					:class="[path == '/technology' ? 'border border-0 border-b-2' : '']"
+					:class="[
+						path == '/space-tourism-website/technology'
+							? 'border border-0 border-b-2'
+							: '',
+					]"
 					class="py-5">
 					<b class="text-white font-bold me-1">03</b> TECHNOLOGY
 				</li>

@@ -6,10 +6,10 @@ import Crew from "./components/page/Crew.vue";
 import Technology from "./components/page/Technology.vue";
 
 const routes = [
-	{ path: "/", component: Home },
-	{ path: "/destination", component: Destination },
-	{ path: "/crew", component: Crew },
-	{ path: "/technology", component: Technology },
+	{ path: "/space-tourism-website", component: Home },
+	{ path: "/space-tourism-website/destination", component: Destination },
+	{ path: "/space-tourism-website/crew", component: Crew },
+	{ path: "/space-tourism-website/technology", component: Technology },
 ];
 
 const router = createRouter({

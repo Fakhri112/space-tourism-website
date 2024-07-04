@@ -13,20 +13,22 @@ defineEmits(["toggleNav"]);
 			<img src="../../assets/shared/icon-close.svg" alt="" />
 		</button>
 		<div class="mt-16 text-slate-300" @click="$emit('toggleNav', false)">
-			<RouterLink to="/">
+			<RouterLink to="/space-tourism-website">
 				<p
 					:class="[
-						path == '/' ? 'border border-0 border-r-4 border-white ' : '',
+						path == '/space-tourism-website'
+							? 'border border-0 border-r-4 border-white '
+							: '',
 					]"
 					class="font-barlowCondensed text-xl tracking-widest">
 					<span class="font-semibold me-2">00</span>
 					HOME
 				</p>
 			</RouterLink>
-			<RouterLink to="/destination">
+			<RouterLink to="/space-tourism-website/destination">
 				<p
 					:class="[
-						path == '/destination'
+						path == '/space-tourism-website/destination'
 							? 'border border-0 border-r-4 border-white '
 							: '',
 					]"
@@ -35,20 +37,22 @@ defineEmits(["toggleNav"]);
 					DESTINATION
 				</p>
 			</RouterLink>
-			<RouterLink to="/crew">
+			<RouterLink to="/space-tourism-website/crew">
 				<p
 					:class="[
-						path == '/crew' ? 'border border-0 border-r-4 border-white ' : '',
+						path == '/space-tourism-website/crew'
+							? 'border border-0 border-r-4 border-white '
+							: '',
 					]"
 					class="font-barlowCondensed text-xl tracking-widest">
 					<span class="font-semibold me-2">02</span>
 					CREW
 				</p>
 			</RouterLink>
-			<RouterLink to="/technology">
+			<RouterLink to="/space-tourism-website/technology">
 				<p
 					:class="[
-						path == '/technology'
+						path == '/space-tourism-website/technology'
 							? 'border border-0 border-r-4 border-white '
 							: '',
 					]"
