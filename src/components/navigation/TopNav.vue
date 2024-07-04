@@ -27,7 +27,7 @@ defineEmits(["toggleNav"]);
 			</li>
 			<li
 				:class="[
-					path == '/space-tourism-website' ? 'border border-0 border-b-2' : '',
+					path == '/space-tourism-website/' ? 'border border-0 border-b-2' : '',
 				]"
 				class="py-5">
 				<RouterLink to="/space-tourism-website">
