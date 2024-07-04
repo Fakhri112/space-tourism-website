@@ -1,45 +1,12 @@
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 import useWindowResize from "../../useWindowResize";
+import { crews } from "../../data/crew-data";
+import imgDskt from "../../assets/crew/background-crew-desktop.jpg";
+import imgTblt from "../../assets/crew/background-crew-tablet.jpg";
+import imgMbl from "../../assets/crew/background-crew-mobile.jpg";
+
 const { width } = useWindowResize();
-const crews = reactive([
-	{
-		name: "DOUGLAS HURLEY",
-		images: {
-			png: "/src/assets/crew/image-douglas-hurley.png",
-			webp: "/src/assets/crew/image-douglas-hurley.webp",
-		},
-		role: "COMMANDER",
-		bio: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
-	},
-	{
-		name: "MARK SHUTTLEWORTH",
-		images: {
-			png: "/src/assets/crew/image-mark-shuttleworth.png",
-			webp: "/src/assets/crew/image-mark-shuttleworth.webp",
-		},
-		role: "MISSION SPECIALIST",
-		bio: "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
-	},
-	{
-		name: "VICTOR GLOVER",
-		images: {
-			png: "/src/assets/crew/image-victor-glover.png",
-			webp: "/src/assets/crew/image-victor-glover.webp",
-		},
-		role: "PILOT",
-		bio: "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.",
-	},
-	{
-		name: "ANOUSHEH ANSARI",
-		images: {
-			png: "/src/assets/crew/image-anousheh-ansari.png",
-			webp: "/src/assets/crew/image-anousheh-ansari.webp",
-		},
-		role: "FLIGHT ENGINEER",
-		bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.",
-	},
-]);
 const currentCrew = ref(0);
 const showContent = ref(true);
 const toggleShow = (idx: number) => {
@@ -56,11 +23,11 @@ const toggleShow = (idx: number) => {
 		<img
 			:src="
 				width >= 1024
-					? '/src/assets/crew/background-crew-desktop.jpg'
+					? imgDskt
 					: width < 1024 && width > 640
-					? '/src/assets/crew/background-crew-tablet.jpg'
+					? imgTblt
 					: width <= 640
-					? '/src/assets/crew/background-crew-mobile.jpg'
+					? imgMbl
 					: ''
 			"
 			class="inset-0 absolute h-full w-full object-cover -z-10 brightness-75"

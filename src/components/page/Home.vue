@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import useWindowResize from "../../useWindowResize";
+import imgDskt from "../../assets/home/background-home-desktop.jpg";
+import imgTblt from "../../assets/home/background-home-tablet.jpg";
+import imgMbl from "../../assets/home/background-home-mobile.jpg";
+
 const { width } = useWindowResize();
 </script>
 
@@ -9,11 +13,11 @@ const { width } = useWindowResize();
 		<img
 			:src="
 				width >= 1024
-					? '/src/assets/home/background-home-desktop.jpg'
+					? imgDskt
 					: width < 1024 && width > 640
-					? '/src/assets/home/background-home-tablet.jpg'
+					? imgTblt
 					: width <= 640
-					? '/src/assets/home/background-home-mobile.jpg'
+					? imgMbl
 					: ''
 			"
 			class="inset-0 absolute h-full w-full -z-10"
