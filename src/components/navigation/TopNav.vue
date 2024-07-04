@@ -1,0 +1,58 @@
+<script setup lang="ts">
+defineProps({
+	path: String,
+});
+
+defineEmits(["toggleNav"]);
+</script>
+
+<template>
+	<nav
+		class="relative z-20 flex items-center gap-x-6 py-5 sm:py-0 lg:py-5 justify-between">
+		<RouterLink to="/">
+			<div class="flex items-center w-full">
+				<img
+					src="../../assets/shared/logo.svg"
+					class="w-10 ms-6 lg:ms-10 lg:me-10"
+					alt="" />
+			</div>
+		</RouterLink>
+		<button class="block sm:hidden" @click="$emit('toggleNav', true)">
+			<img src="../../assets/shared/icon-hamburger.svg" class="me-5" alt="" />
+		</button>
+		<ul
+			class="hidden sm:flex backdrop-blur-2xl items-center relative justify-around font-extralight gap-x-6 font-barlowCondensed bg-slate-700 bg-opacity-30 ms-2 sm:w-[90%] lg:w-[55%]">
+			<li class="sm:py-0 lg:py-5 hidden lg:block">
+				<hr class="border-slate-700 w-[68%] absolute left-[-65%]" />
+			</li>
+			<li
+				:class="[path == '/' ? 'border border-0 border-b-2' : '']"
+				class="py-5">
+				<RouterLink to="/">
+					<b class="text-white font-bold me-1">00</b> HOME
+				</RouterLink>
+			</li>
+			<li
+				:class="[path == '/destination' ? 'border border-0 border-b-2' : '']"
+				class="py-5">
+				<RouterLink to="/destination">
+					<b class="text-white font-bold me-1">01</b> DESTINATION
+				</RouterLink>
+			</li>
+			<RouterLink to="/crew">
+				<li
+					:class="[path == '/crew' ? 'border border-0 border-b-2' : '']"
+					class="py-5">
+					<b class="text-white font-bold me-1">02</b> CREW
+				</li>
+			</RouterLink>
+			<RouterLink to="/technology">
+				<li
+					:class="[path == '/technology' ? 'border border-0 border-b-2' : '']"
+					class="py-5">
+					<b class="text-white font-bold me-1">03</b> TECHNOLOGY
+				</li>
+			</RouterLink>
+		</ul>
+	</nav>
+</template>
