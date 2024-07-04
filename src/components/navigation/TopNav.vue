@@ -9,7 +9,7 @@ defineEmits(["toggleNav"]);
 <template>
 	<nav
 		class="relative z-20 flex items-center gap-x-6 py-5 sm:py-0 lg:py-5 justify-between">
-		<RouterLink to="/">
+		<RouterLink to="/space-tourism-website">
 			<div class="flex items-center w-full">
 				<img
 					src="../../assets/shared/logo.svg"
