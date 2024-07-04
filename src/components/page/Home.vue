@@ -20,7 +20,7 @@ const { width } = useWindowResize();
 					? imgMbl
 					: ''
 			"
-			class="inset-0 absolute h-full w-full -z-10"
+			class="inset-0 absolute h-screen w-full -z-10"
 			alt="" />
 		<div class="w-full lg:w-[70%] w-full lg:text-start text-center">
 			<p class="font-barlowCondensed tracking-widest font-thin">
@@ -35,7 +35,7 @@ const { width } = useWindowResize();
 				experience!
 			</p>
 		</div>
-		<RouterLink to="/destination">
+		<RouterLink to="/space-tourism-website/destination">
 			<div
 				class="cursor-pointer rounded-full relative grid place-items-center w-80 h-80">
 				<div

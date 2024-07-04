@@ -30,7 +30,7 @@ const toggleShow = (idx: number) => {
 					? imgMbl
 					: ''
 			"
-			class="inset-0 absolute h-full w-full -z-10"
+			class="inset-0 absolute h-screen w-full -z-10"
 			alt="" />
 		<p
 			class="font-barlowCondensed text-xl sm:mb-0 mb-14 tracking-widest sm:text-start text-center">
@@ -42,7 +42,7 @@ const toggleShow = (idx: number) => {
 			<Transition name="image">
 				<img
 					v-if="showContent"
-					class="lg:h-[25vw] h-full min-h-[200px] sm:h-[32vw] object-contain"
+					class="lg:h-[25vw] h-[200px] sm:h-[32vw] object-contain"
 					:src="destinations[currentDestination].images.png"
 					alt="" />
 			</Transition>

@@ -30,7 +30,7 @@ const toggleShow = (idx: number) => {
 					? imgMbl
 					: ''
 			"
-			class="inset-0 absolute h-full w-full object-cover -z-10 brightness-75"
+			class="inset-0 absolute h-screen w-full object-cover -z-10 brightness-75"
 			alt="" />
 		<p
 			class="font-barlowCondensed text-xl tracking-widest sm:text-start text-center">
