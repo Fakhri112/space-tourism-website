@@ -8,15 +8,19 @@ defineEmits(["toggleNav"]);
 </script>
 
 <template>
+	<div
+		@click="$emit('toggleNav', false)"
+		:class="[toggleNav ? '' : 'hidden']"
+		class="absolute inset-0"></div>
 	<div :class="[toggleNav ? '!w-[230px]' : '!w-0']" class="sidenav">
 		<button @click="$emit('toggleNav', false)" class="closebtn">
 			<img src="../../assets/shared/icon-close.svg" alt="" />
 		</button>
 		<div class="mt-16 text-slate-300" @click="$emit('toggleNav', false)">
-			<RouterLink to="/space-tourism-website">
+			<RouterLink to="/space-tourism-website/">
 				<p
 					:class="[
-						path == '/space-tourism-website'
+						path == '/space-tourism-website/'
 							? 'border border-0 border-r-4 border-white '
 							: '',
 					]"

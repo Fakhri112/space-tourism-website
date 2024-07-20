@@ -9,16 +9,16 @@ defineEmits(["toggleNav"]);
 <template>
 	<nav
 		class="relative z-20 flex items-center gap-x-6 py-5 sm:py-0 lg:py-5 justify-between">
-		<RouterLink to="/space-tourism-website">
+		<RouterLink to="/space-tourism-website/">
 			<div class="flex items-center w-full">
 				<img
 					src="../../assets/shared/logo.svg"
-					class="w-10 ms-6 lg:ms-10 lg:me-10"
+					class="md:w-10 w-7 ms-6 lg:ms-10 lg:me-10"
 					alt="" />
 			</div>
 		</RouterLink>
 		<button class="block sm:hidden" @click="$emit('toggleNav', true)">
-			<img src="../../assets/shared/icon-hamburger.svg" class="me-5" alt="" />
+			<img src="../../assets/shared/icon-hamburger.svg" class="me-7" alt="" />
 		</button>
 		<ul
 			class="hidden sm:flex backdrop-blur-2xl items-center relative justify-around font-extralight gap-x-6 font-barlowCondensed bg-slate-700 bg-opacity-30 ms-2 sm:w-[90%] lg:w-[55%]">
@@ -30,7 +30,7 @@ defineEmits(["toggleNav"]);
 					path == '/space-tourism-website/' ? 'border border-0 border-b-2' : '',
 				]"
 				class="py-5">
-				<RouterLink to="/space-tourism-website">
+				<RouterLink to="/space-tourism-website/">
 					<b class="text-white font-bold me-1">00</b> HOME
 				</RouterLink>
 			</li>
