@@ -86,7 +86,7 @@ const toggleShow = (idx: number) => {
 			<Transition name="image">
 				<img
 					v-if="showContent"
-					class="object-contain lg:w-auto w-full lg:max-h-[360px]"
+					class="object-contain lg:w-auto w-full lg:h-[65vh]"
 					:src="
 						width >= 1024 || width <= 640
 							? technologies[currentTechnology].images.portrait

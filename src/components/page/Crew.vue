@@ -38,7 +38,7 @@ const toggleShow = (idx: number) => {
 			MEET YOUR CREW
 		</p>
 		<div
-			class="flex mt-24 sm:mt-16 lg:mt-0 lg:flex-row flex-col items-center lg:items-stretch gap-x-10 justify-center h-full w-full">
+			class="flex mt-10 lg:mt-0 lg:flex-row flex-col items-center lg:items-stretch gap-x-10 justify-center h-full w-full">
 			<div class="flex-col flex justify-between py-14">
 				<div class="invisible">You found me. Congratulation 😁</div>
 				<Transition :name="width >= 1024 ? 'text-lg' : 'text'">

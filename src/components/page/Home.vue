@@ -37,11 +37,11 @@ const { width } = useWindowResize();
 		</div>
 		<RouterLink to="/space-tourism-website/destination">
 			<div
-				class="cursor-pointer rounded-full relative grid place-items-center w-80 h-80">
+				class="cursor-pointer rounded-full relative grid place-items-center w-[50vh] h-[50vh]">
 				<div
 					class="absolute rounded-full h-full w-full transition-all hover:bg-white hover:bg-opacity-20 z-10"></div>
 				<div
-					class="absolute bg-white text-slate-900 font-bellefair text-4xl w-52 h-52 rounded-full grid place-items-center">
+					class="absolute bg-white text-slate-900 font-bellefair text-4xl lg:text-[6vh] w-[30vh] h-[30vh] rounded-full grid place-items-center">
 					Explore
 				</div>
 			</div>
